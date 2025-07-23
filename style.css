@@ -25,5 +25,74 @@ nav a{
   transition: color 0.3s ease;
 }
 
+nave a:hover{
+  color:#8ca1a5;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width:120px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index:999;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  
+}
+
+/* 下拉選單項目 */
+.dropdown-content a {
+  padding: 0.5rem 1rem;
+  display: block;
+  text-align: left;
+  color: #3e3e3e;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: #8ca1a5;
+}
+
+/* 滑鼠移入顯示選單 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+section {
+  padding: 100px 10% 80px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #8ca1a5;
+  padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   

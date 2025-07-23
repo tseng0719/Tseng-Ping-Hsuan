@@ -1,166 +1,134 @@
+
 body {
-  margin: 0;
   font-family: 'Noto Serif TC', serif;
-  background-color: #f7f6f2;
-  color: #3e3e3e;
+  margin: 0;
+  background: #fffdf8;
+  color: #3a3a3a;
+  line-height: 1.8;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem;
+.main-nav {
+  background: #f9f8f3;
+  padding: 20px 10%;
+}
+
+.main-nav ul {
+  list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  font-family: 'Noto Sans TC', sans-serif;
-  z-index: 1000;
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
+.main-nav a {
   text-decoration: none;
-  color: #3e3e3e;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #8ca1a5;
-}
-
-/* 下拉選單容器 */
-.dropdown {
+  color: #3a3a3a;
+  font-weight: bold;
   position: relative;
-  display: inline-block;
 }
 
-/* 下拉選單內容（預設不顯示） */
-.dropdown-content {
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-  z-index: 999;
-  flex-direction: column;
-  padding: 0.5rem 0;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* 下拉選單項目 */
-.dropdown-content a {
-  padding: 0.5rem 1rem;
-  display: block;
-  text-align: left;
-  color: #3e3e3e;
+.dropdown-menu li {
+  margin-bottom: 0.5rem;
 }
 
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-  color: #8ca1a5;
+.section-block {
+  padding: 80px 10%;
 }
 
-/* 滑鼠移入顯示選單 */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-section {
-  padding: 100px 10% 80px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid #8ca1a5;
+.section-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #c2b49a;
   padding-left: 1rem;
 }
-.music-section {
-padding: 100px 10% 60px;
-background-color: #fdfcf9;
-font-family: 'Noto Serif TC', serif;
-color: #3a3a3a;
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
 }
 
-.music-hero {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: space-between;
-gap: 2rem;
+.timeline .year {
+  font-weight: bold;
+  color: #8ca1a5;
+  margin-right: 1rem;
 }
 
-.music-text-box {
-flex: 1;
-min-width: 300px;
+.media {
+  margin-top: 2rem;
 }
 
-.music-text-box h2 {
-font-size: 2rem;
-border-left: 5px solid #c2b49a;
-padding-left: 1rem;
-margin-bottom: 1rem;
+.photo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-.music-subtext {
-font-style: italic;
-font-size: 1.1rem;
-margin-bottom: 1.2rem;
-color: #5a5a5a;
+.pet-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.music-more {
-line-height: 1.8;
+.pet-gallery img {
+  width: 30%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-.music-image {
-flex: 1;
-min-width: 280px;
-text-align: center;
+.travel-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
 }
 
-.music-image img {
-max-width: 100%;
-border-radius: 12px;
-box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+.travel-item.reverse {
+  flex-direction: row-reverse;
 }
 
-.music-media-block {
-margin-top: 4rem;
-text-align: center;
+.travel-item img {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-.media-photo {
-max-width: 300px;
-border-radius: 8px;
-box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-margin-bottom: 2rem;
+.travel-text {
+  width: 50%;
 }
 
-blockquote {
-font-style: italic;
-font-size: 1rem;
-color: #555;
-margin: 1rem auto 2rem;
-max-width: 600px;
+.travel-text h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #6b5e4e;
 }
 
-.author {
-color: #c2b49a;
-font-weight: bold;
+.contact-section {
+  text-align: center;
+  background: #f4f3ef;
+  padding: 100px 10%;
 }
 
-.youtube-wrapper {
-max-width: 720px;
-aspect-ratio: 16/9;
-margin: 0 auto;
-}
-
-.youtube-wrapper iframe {
-width: 100%;
-height: 100%;
-border-radius: 12px;
-border: none;
+.email-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #8ca1a5;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }

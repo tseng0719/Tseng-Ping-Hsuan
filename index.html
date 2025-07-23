@@ -1,97 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset ="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>個人網站</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的個人網站</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <nav>
-    <a href="#about">關於我</a>
-    <div class="dropdown">
-      <a href="#academic" class="dropbtn">學術 ▾</a>
-        <div class="dropdown-content">
-            <a href="#certifcate">證照</a>
-            <a href="#practice">實習</a>
-            <a href="#work">作品</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-        <a href="#life" class="dropbtn">生活 ▾</a>
-        <div class="dropdown-content">
-          <a href="#music">音樂</a>
-          <a href="#pet">寵物</a>
-          <a href="#travel">旅遊</a>
-      </div>
-    </div>
-
-    <a href="#contact">聯絡我</a>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">關於我</a></li>
+      <li><a href="#academic">學術成果</a></li>
+      <li class="dropdown">
+        <a href="#life">生活</a>
+        <ul class="dropdown-menu">
+          <li><a href="#music">音樂</a></li>
+          <li><a href="#pets">寵物</a></li>
+        </ul>
+      </li>
+      <li><a href="#travel">旅遊</a></li>
+      <li><a href="#contact">聯絡我</a></li>
+    </ul>
   </nav>
 
-  <section id="about">
-    <h1>關於我</h1>
-    <p>這裡是個人簡介。</p>
+  <section id="about" class="section-block">
+    <h2>關於我</h2>
+    <p>我是個喜歡記錄與分享的人，從樂團、學術到旅行，每段經歷都是一種自我探索。</p>
+    <p>安靜、細膩、對細節敏感。喜歡在音樂裡沉澱，在寫作裡療癒。</p>
   </section>
 
-  <section id="certifcate">
-    <h1>證照</h1>
-    <p>證照考試。</p>
+  <section id="academic" class="section-block">
+    <h2>學術成果</h2>
+    <ul class="timeline">
+      <li><span class="year">2023</span>發表於 XXIC 國際研討會：〈現代XXX之分析〉</li>
+      <li><span class="year">2022</span>專題研究優選：跨領域語言設計與應用</li>
+    </ul>
   </section>
 
-   <section id="practice">
-    <h1>實習</h1>
-    <p>實習經驗。</p>
-  </section>
-
-  <section id="work">
-    <h1>作品</h1>
-    <p>作品集</p>
-  </section>
-
-<section id="music" class="music-section">
-  <div class="music-hero">
-    <div class="music-text-box">
-      <h2>音樂與生活</h2>
-        <p class="music-subtext">音樂由~~~~~~~~~~~~~。</p>
-        <p class="music-more">
-          小學時聽同學說長笛很漂亮，<br>
-          讓我有機會對鼓起勇氣亦或是死纏爛打(? 跟家人說想學長笛<br>
-          恍惚間，12年過去了<br>
-          挑戰大大小小的比賽，體驗不同的音樂營隊，走過一場又一場的音樂會<br>
-          音樂是我生活中的小確幸<br>
-        </p>
+  <section id="music" class="section-block">
+    <h2>音樂</h2>
+    <p>音樂是我靈魂的節奏，從小學二年級開始學樂器並固定參賽。曾任輔大管弦管樂團長與顧問，至今仍活躍於樂團中。</p>
+    <div class="media">
+      <img src="images/music_photo.jpg" alt="演出照片" class="photo" />
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YourVideoID" frameborder="0" allowfullscreen></iframe>
     </div>
-      <div class="music-image">
-          <img src="images/music_photo.jpg" alt="我的音樂照片">
+  </section>
+
+  <section id="pets" class="section-block">
+    <h2>我的貓</h2>
+    <p>牠總是用眼神告訴我：「你累了，就來我這裡。」</p>
+    <div class="pet-gallery">
+      <img src="images/cat1.jpg" alt="貓咪1" />
+      <img src="images/cat2.jpg" alt="貓咪2" />
+      <img src="images/cat3.jpg" alt="貓咪3" />
+    </div>
+  </section>
+
+  <section id="travel" class="section-block">
+    <h2>旅遊</h2>
+    <div class="travel-item">
+      <img src="images/kyoto-temple.jpg" alt="京都寺廟" />
+      <div class="travel-text">
+        <h3>京都的靜寂</h3>
+        <p>一個人坐在清水寺旁聽風，看著紅葉掉落，像是一場內在的淨化儀式。</p>
       </div>
     </div>
-      <div class="music-media-block">
-          <img src="images/latte.jpg" alt="音樂與生活" class="media-photo">
-          <blockquote>「音樂不是完美的音符，而是你誠實地走過的痕跡。」<br>
-                <span class="author">— Me</span>
-          </blockquote>
-      <div class="youtube-wrapper">
-    <iframe src="https://www.youtube.com/embed/你的影片ID"
-      title="音樂演出影片" frameborder="0" allowfullscreen></iframe>
+    <div class="travel-item reverse">
+      <img src="images/taroko-trail.jpg" alt="太魯閣步道" />
+      <div class="travel-text">
+        <h3>太魯閣的壯闊</h3>
+        <p>石壁與溪水在我腳邊共鳴，走在峽谷中的那一刻，我忘了自己來自哪裡。</p>
       </div>
-      </div>
-    </section>
-
-  <section id="pet">
-    <h1>寵物</h1>
-    <p>毛孩日常照與故事。</p>
+    </div>
   </section>
 
-  <section id="travel">
-    <h1>旅遊</h1>
-    <p>旅行照片、心得與推薦。</p>
-  </section>
-
-  <section id="contact">
-    <h1>聯絡我</h1>
-    <p>Email：yourmail@example.com</p>
+  <section id="contact" class="section-block contact-section">
+    <h2>聯絡我</h2>
+    <p>有話想說嗎？歡迎寄信給我 ☕</p>
+    <a href="mailto:youremail@example.com" class="email-button">youremail@example.com</a>
   </section>
 
 </body>
